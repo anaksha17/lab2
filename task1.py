@@ -50,15 +50,17 @@ class SimpleReflexAgent:
         # Move to the next position in the grid
         if self.position < 8:
             self.position += 1
-   
+def step_to_letter(step):
+    return chr(97 + step)    
 
 def run_agent(agent, environment, steps):
     for step in range(steps):
+        letter= step_to_letter(step)
          
         percept = environment.get_percept(agent.position)
         action = agent.act(percept, environment.grid)
 
-        print(f"Step {step+1}: Position {agent.position} -> Percept: {percept}, Action: {action}")
+        print(f"Step {letter}: Position {agent.position} -> Percept: {percept}, Action: {action}")
         environment.display_grid(agent.position)  # Display the grid state
 
         if percept == 'Vulnerable':
