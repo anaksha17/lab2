@@ -12,7 +12,7 @@ class Environment:
 
     def Scan(self, position):
         # Complete the task at the given position
-        self.grid[position] = 'Patching'
+        self.grid[position] = 'Patched'
        
      
     def display_grid(self, agent_position):
