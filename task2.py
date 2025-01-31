@@ -2,8 +2,8 @@ class Environment:
     def __init__(self):
         # Create a 3x3 grid, where some positions are dirty
         self.grid = [
-            ' UnderLoaded', 'OverLoaded ', 'Balanced',
-            ' OverLoaded', 'Balanced', 
+            'UnderLoaded', 'OverLoaded', 'Balanced',
+            'OverLoaded', 'Balanced', 
         ]
 
     def get_percept(self, position):
